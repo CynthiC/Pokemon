@@ -11,11 +11,9 @@ function App() {
   return (
     <div>
     <BrowserRouter>
-      <div className='w-36'>
        <Navbar/> 
-      </div>
         <Routes>
-          <Route path="/main" element={<Main />} />
+          <Route path="/" element={<Main />} />
           <Route path="/pokemon/:id" element={<Pokemon />} />
           <Route path="/perfil" element={<Perfil/>} />
         </Routes>
