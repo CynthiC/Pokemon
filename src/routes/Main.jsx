@@ -36,7 +36,6 @@ export const Main = () => {
             // console.log("MAP DATA", result.data);
             setPokeData(state => {
                 state = [...state,result.data]
-                state.sort((a,b) => a.id>b.id?1:-1)
                 return state;
             })
            
@@ -50,7 +49,7 @@ export const Main = () => {
     }, [url])
 
     return(
-    <div className=' md:grid md:grid-cols-3 md:gap-3 sm:grid sm:grid-cols-2 sm:gap-2 flex flex-col  items-center'>
+    <div className=' md:grid md:grid-cols-5 md:gap-2 sm:grid sm:grid-cols-8 sm:gap-2=5 flex flex-col  items-center'>
     {pokeData.map(
         (pokeData, index) => {
             return(
@@ -68,7 +67,7 @@ export const Main = () => {
           
                 </div>
                 <Link to={`/pokemon/${pokeData.id}`}>
-                <button className='w-full border border-gray-400 rounded-lg hover:bg-slate-100 duration-200'>Ver</button>
+                <button className='w-full border border-gray-400 rounded-lg hover:bg-slate-100 duration-200'><img src="https://img.icons8.com/color/48/000000/open-pokeball--v2.png"/>OPEN THE BALL</button>
                 </Link>
               </div> 
             )
